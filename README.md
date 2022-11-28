@@ -1,1 +1,1 @@
-# MINITALK-42network 
+Stupid person make a stupid minitalk.

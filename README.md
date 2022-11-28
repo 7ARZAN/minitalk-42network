@@ -1,1 +1,1 @@
-Stupid person make a stupid minitalk.
+A stupid person make a stupid minitalk.

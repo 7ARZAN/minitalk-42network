@@ -30,7 +30,7 @@ server_bonus: server_bonus.c minitalk_utils.c $(INC_BONUS)
 	cc $(CFLAGS) server_bonus.c minitalk_utils.c -o server_bonus
 
 client_bonus: client_bonus.c minitalk_utils.c $(INC_BONUS)
-	cc $(CFLAGS)  client_bonus.c minitalk_utils -o client_bonus
+	cc $(CFLAGS)  client_bonus.c minitalk_utils.c -o client_bonus
 
 clean:
 	

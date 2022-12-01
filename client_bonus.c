@@ -28,7 +28,7 @@ void  send_character(int pid, char c)
   }
 }
 
-void  hander(int sig)
+void  handler(int sig)
 {
   if (sig == SIGUSR1)
     ft_putstr("wslat bslamtha am3alem\n");

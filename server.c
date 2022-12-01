@@ -20,7 +20,7 @@ void  handler(int signum, siginfo_t *sig_info, void *context)
   static int  i;
 
   (void) context;
-  signum -= SIGUSER1;
+  signum -= SIGUSR1;
   if (g_pid != sig_info->si_pid)
   {
     ascii = 0;
@@ -46,8 +46,8 @@ int   main(void)
 
   g.sa_sigaction = &handler;
   g.sa_flags = SA_SIGINFO;
-  sigaction(SIGUSER1, &g, NULL);
-  sigaction(SIGUSER2, &g, NULL);
+  sigaction(SIGUSR1, &g, NULL);
+  sigaction(SIGUSR2, &g, NULL);
   ft_putstr("PID = ");
   ft_putnbr(getpid());
   ft_putstr("\n");

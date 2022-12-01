@@ -65,16 +65,16 @@ void 	ft_putnbr(int n)
 	}
 }
 
-void 	ft_putstr(char *s)
+void 	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (!s)
+	if (!str)
 		return ;
-	while (s[i])
+	while (str[i])
 	{
-		ft_putchar(s[i]);
+		ft_putchar(str[i]);
 		i++;
 	}
 }

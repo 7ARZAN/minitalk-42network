@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   minitalk_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 05:56:24 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/10/25 08:08:27 by elakhfif         ###   ########.fr       */
+/*   Updated: 2022/12/02 15:27:27 by 7arzan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-#include "minitalk_bonus.h"
 
 int	ft_atoi(const char *str)
 {
@@ -38,14 +37,14 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-void   ft_putchar(char c)
+void	ft_putchar(char c)
 {
-  write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void 	ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
-	long 	x;
+	long	x;
 
 	x = n;
 	if (x < 0)
@@ -60,12 +59,12 @@ void 	ft_putnbr(int n)
 	}
 	else
 	{
-		ft_putnbr(x / 10);		
-		ft_putnbr(x % 10);		
+		ft_putnbr(x / 10);
+		ft_putnbr(x % 10);
 	}
 }
 
-void 	ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
 	int	i;
 

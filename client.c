@@ -6,7 +6,7 @@
 /*   By: elakhfif <elakhfif@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 06:14:47 by elakhfif          #+#    #+#             */
-/*   Updated: 2022/11/25 06:14:52 by elakhfif         ###   ########.fr       */
+/*   Updated: 2024/12/25 21:40:37 by elakhfif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	send_character(int pid, char c)
 		else
 			kill(pid, SIGUSR1);
 		i--;
-		usleep(500);
+		usleep(40);
 	}
 }
 
@@ -44,22 +44,19 @@ int	check_error(char *str)
 
 int	main(int ac, char **av)
 {
-	int		pid;
 	char	*str;
+	int		pid;
 	int		i;
 
-	i = 0;
+	i = -1;
 	if (ac == 3)
 	{
 		pid = check_error(av[1]);
 		if (pid > 0)
 		{
 			str = av[2];
-			while (str[i])
-			{
+			while (str[++i])
 				send_character(pid, str[i]);
-				i++;
-			}
 			ft_putchar('\n');
 		}
 		else
